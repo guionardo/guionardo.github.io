@@ -1,5 +1,7 @@
-var cacheName = 'hello-pwa';
-var filesToCache = [
+importScripts('/cache-polyfill.js');
+
+const cacheName = 'aiai';
+const filesToCache = [
   '/',
   '/index.html',
   '/css/style.css',
@@ -24,6 +26,7 @@ self.addEventListener('install', function (e) {
     })
   );
 });
+
 
 /* Serve cached content when offline */
 self.addEventListener('fetch', function (e) {
