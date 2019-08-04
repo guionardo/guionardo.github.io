@@ -4,7 +4,7 @@ const cacheName = 'aiai';
 const filesToCache = [
   '/',
   '/index.html',
-  '/manifest.json',  
+  //'manifest.json',  
   '/assets/lasier.mp3',
   '/assets/favicon.ico',
   '/assets/mstile-70x70.png',
