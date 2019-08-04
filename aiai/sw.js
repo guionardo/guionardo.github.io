@@ -1,4 +1,4 @@
-//import('js/cache-polyfill.js');
+importScripts('js/cache-polyfill.js');
 
 const cacheName = 'aiai';
 const filesToCache = [
@@ -16,6 +16,8 @@ const filesToCache = [
   //'/assets/electric.svg',
   '/assets/android-chrome-192x192.png',
   '/assets/android-chrome-512x512.png',
+  '/assets/favicon-16x16.png',
+  '/assets/favicon-32x32.png'
 ];
 
 /* Start the service worker and cache all of the app's content */
@@ -33,11 +35,13 @@ self.addEventListener('fetch', function (e) {
   e.respondWith(
     caches.match(e.request).then(function (response) {
       if (response){
-        console.log('Cache: '+e.request);
+        console.log('Cache: ',e.request);
         return response;
       }
-      console.log('Fecth: '+e.request);
+      console.log('Fecth: ',e.request);
       return response || fetch(e.request);
+    }).catch((e)=>{
+      console.error('Fetch Error ',e);
     })
   );
 });
