@@ -1,43 +1,4 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>Lasier Martins, o choque!</title>    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-    <link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="manifest" href="manifest.json">
-    <style>body {
-    font-family: sans-serif;
-}
-
-html, .fullscreen {
-    display: flex;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
-.container {
-    margin: auto;
-    text-align: center;
-}
-
-.title {
-    font-size: 3rem;
-}</style>
-</head>
-
-<body class="fullscreen">    
-    <div class="container">
-        <h1>Hora do choque!</h1>
-        <button id="play" class="title"><svg height="512pt" width="90%" viewBox="0 0 512 512">
+<svg xmlns="http://www.w3.org/2000/svg" height="512pt" version="1.1" viewBox="0 0 512 512" width="512pt">
 <g id="surface1">
 <path d="M 512 256 C 512 397.386719 397.386719 512 256 512 C 114.613281 512 0 397.386719 0 256 C 0 114.613281 114.613281 0 256 0 C 397.386719 0 512 114.613281 512 256 Z M 512 256 " style=" stroke:none;fill-rule:nonzero;fill:rgb(25.490196%,28.627451%,32.156863%);fill-opacity:1;" />
 <path d="M 507.851562 302.09375 L 283.558594 78.503906 L 84.59375 362.730469 L 232.808594 510.941406 C 240.449219 511.628906 248.179688 512 256 512 C 381.648438 512 486.144531 421.476562 507.851562 302.09375 Z M 507.851562 302.09375 " style=" stroke:none;fill-rule:nonzero;fill:rgb(20%,22.352941%,25.098039%);fill-opacity:1;" />
@@ -49,28 +10,4 @@ html, .fullscreen {
 <path d="M 269.667969 130.578125 L 255.761719 153.65625 L 255.761719 202.65625 Z M 269.667969 130.578125 " style=" stroke:none;fill-rule:nonzero;fill:rgb(91.372549%,92.941176%,96.078431%);fill-opacity:1;" />
 <path d="M 255.761719 217.402344 L 255.761719 284.972656 L 299.078125 217.402344 Z M 255.761719 217.402344 " style=" stroke:none;fill-rule:nonzero;fill:rgb(91.372549%,92.941176%,96.078431%);fill-opacity:1;" />
 </g>
-</svg></button>
-    </div>
-    <script>const sound = new Audio();
-sound.src = 'assets/lasier.mp3';
-
-window.onload = () => {
-    'use strict';
-
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker
-            .register('./sw.js').then(() => {
-                console.log("Service Worker Registered");
-            }).catch((e) => {
-                console.error(e);
-            });
-    }
-
-    document.getElementById('play').addEventListener('click', () => {
-        console.log('Ai Ai!');
-        sound.play();
-    })
-}</script>
-</body>
-
-</html>
+</svg>
