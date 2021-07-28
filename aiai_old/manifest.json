@@ -1,0 +1,30 @@
+{
+    "name": "Lazier Choque!",
+    "short_name": "Choque",
+    "icons": [{
+        "src": "assets/mstile-144x144.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      }, {
+        "src": "assets/mstile-150x150.png",
+        "sizes": "150x150",
+        "type": "image/png"
+      }, {
+        "src": "assets/android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }, {
+        "src": "assets/mstile-310x310.png",
+        "sizes": "310x310",
+        "type": "image/png"
+      }, {
+        "src": "assets/android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }],
+    "lang": "en-US",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "white",
+    "theme_color": "white"
+  }
